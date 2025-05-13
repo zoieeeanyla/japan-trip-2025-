@@ -1,68 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Japan Trip 2025</title>
-  <link rel="stylesheet" href="style.css"> <!-- Optional if using external file -->
+
+  <!-- Cute Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
-    /* Paste CSS here */
-    .image-gallery {
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fff0f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #ffd6e0;
+      padding: 15px 20px;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
-      margin: 20px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
 
-    .image-gallery figure {
-      margin: 15px;
-      text-align: center;
+    .navbar h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #d6336c;
     }
 
-    .image-gallery img {
-      max-width: 100%;
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #d6336c;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #a61e4d;
+    }
+
+    /* Day Section */
+    .day-section {
+      padding: 40px 20px;
+    }
+
+    .day-section h2 {
+      color: #e75480;
+    }
+
+    .itinerary-item {
+      margin: 10px 0;
+    }
+
+    .notes, .food {
+      margin-top: 30px;
+      background-color: #ffe6ef;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 15px;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    .image-gallery figcaption {
-      margin-top: 8px;
-      font-style: italic;
-      color: #555;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
   </style>
 </head>
-<section id="day1" class="day-section">
-  <h2>Day 1: Monday, May 26 - Arrival in Tokyo, Visit Shibuya</h2>
-  <ul class="schedule">
-    <li>✈️ <strong>3:50 PM</strong> – Arrive at Haneda Airport (HND)</li>
-    <li>🚗 <strong>4:30 PM</strong> – Private car service to Airbnb</li>
-    <li>🚆 <strong>6:00 PM – 6:45 PM</strong> – Explore Harajuku's Takeshita Street (snacks, crepes, photo ops)</li>
-    <li>🌆 <strong>7:00 PM – 8:00 PM</strong> – Head to Shibuya: see Shibuya Crossing & Shibuya Sky</li>
-    <li>🍱 <strong>8:00 PM</strong> – Dinner in Shibuya (e.g., Ichiran Ramen, Uobei Sushi, or Genki Izakaya)</li>
-    <li>🏠 <strong>9:30 PM</strong> – Return to Airbnb & rest</li>
-  </ul>
 
-  <div class="image-gallery">
-    <figure>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Shibuya_Crossing_2018.jpg" alt="Shibuya Crossing" />
-      <figcaption>Shibuya Crossing — Tokyo's iconic scramble intersection</figcaption>
-    </figure>
-    <figure>
-      <img src="https://livejapan.com/thumb/guide/1264/1264_010_01.jpg" alt="Harajuku Crepes" />
-      <figcaption>Harajuku crepes — sweet, fluffy, and photo-ready!</figcaption>
-    </figure>
-  </div>
+<body>
 
-  <div class="notes">
-    <h3>📝 Notes:</h3>
-    <p>Explore Harajuku & Shibuya with pride — <strong>bold style is celebrated</strong>. Keep an eye out for Black-owned pop-ups, and check <em>Loft</em> or <em>Shibuya 109</em> for diverse haircare brands.</p>
-  </div>
-
-  <div class="food">
-    <h3>🍽️ Food Ideas – Day 1 (Harajuku & Shibuya)</h3>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>Japan Trip 2025</h1>
     <ul>
-      <li>🥞 <strong>Breakfast:</strong> Flippers (Shibuya) or The Little Bakery Tokyo (Omotesando)</li>
-      <li>🍱 <strong>Dinner:</strong> Ichiran Ramen, Uobei Sushi, or Genki Izakaya (Shibuya)</li>
-      <li>🍡 <strong>Treats:</strong> Harajuku crepes or convenience store sweets</li>
+      <li><a href="#day1">Day 1</a></li>
+      <li><a href="#day2">Day 2</a></li>
+      <li><a href="#day3">Day 3</a></li>
+      <!-- Add more days later -->
     </ul>
-  </div>
-</section>
+  </nav>
+
+  <!-- Day 1 Section -->
+  <section id="day1" class="day-section">
+    <h2>Day 1: Monday, May 26 - Arrival in Tokyo, Visit Shibuya</h2>
+    <div class="itinerary-item">✈️ 3:50 PM – Arrive at Haneda Airport (HND)</div>
+    <div class="itinerary-item">🚗 4:30 PM – Private car service to Airbnb</div>
+    <div class="itinerary-item">🚆 6:00 PM – 6:45 PM – Explore Harajuku's Takeshita Street (snacks, crepes, photo ops)</div>
+    <img src="https://cdn.japantravel.com/photo/22890-229478/1440x960!/harajuku-takeshita-street-229478.jpg" alt="Harajuku Takeshita Street">
+    <div class="itinerary-item">🌆 7:00 PM – 8:00 PM – Head to Shibuya: see Shibuya Crossing & Shibuya Sky</div>
+    <img src="https://media.cntraveler.com/photos/58c2f629b44b1a1f32d18ae7/16:9/w_2560%2Cc_limit/GettyImages-493927268.jpg" alt="Shibuya Crossing">
+    <div class="itinerary-item">🍱 8:00 PM – Dinner in Shibuya (e.g., Ichiran Ramen, Uobei Sushi, or Genki Izakaya)</div>
+    <div class="itinerary-item">🏠 9:30 PM – Return to Airbnb & rest</div>
+
+    <div class="notes">
+      <h3>📝 Notes</h3>
+      <p>Explore Harajuku & Shibuya with pride — bold style is celebrated. Keep an eye out for Black-owned pop-ups, and check Loft or Shibuya 109 for diverse haircare brands.</p>
+    </div>
+
+    <div class="food">
+      <h3>🍽️ Food Ideas – Day 1</h3>
+      <p><strong>🥞 Breakfast:</strong> Flippers (Shibuya) or The Little Bakery Tokyo (Omotesando)</p>
+      <p><strong>🍱 Dinner:</strong> Ichiran Ramen, Uobei Sushi, or Genki Izakaya (Shibuya)</p>
+      <p><strong>🍡 Treats:</strong> Harajuku crepes or convenience store sweets</p>
+    </div>
+  </section>
+
+</body>
+</html>
