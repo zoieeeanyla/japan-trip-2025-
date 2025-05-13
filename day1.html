@@ -1,138 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Japan Trip</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- Quicksand Font -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 1 - Tokyo Arrival</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: 'Quicksand', sans-serif;
-      color: #333;
-      background-color: #ffe4ec; /* light pink */
-      font-size: 18px;
+      background-color: #ffe6f0;
+      margin: 0;
+      padding: 0;
+      font-size: 1.2em;
     }
 
-    .navbar {
-      background-color: rgba(255, 228, 225, 0.95);
-      padding: 10px 0;
-      text-align: center;
+    nav {
       position: sticky;
       top: 0;
-      z-index: 1000;
-      border-bottom: 2px solid #ffb6c1;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    .navbar a {
-      color: #d6336c;
-      text-decoration: none;
-      padding: 10px 15px;
-      font-size: 18px;
-      display: inline-block;
-      transition: background-color 0.3s ease;
-    }
-
-    .navbar a:hover {
-      background-color: #ffd6dc;
-      border-radius: 5px;
-    }
-
-    .navbar i {
-      margin-right: 6px;
-    }
-
-    .content {
-      padding: 40px 20px;
+      background-color: #ffb6c1;
+      padding: 10px;
       text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 1.1em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      padding: 20px;
     }
 
     h1 {
-      margin-bottom: 20px;
-      font-weight: 600;
-      font-size: 32px;
-      color: #c2185b;
+      text-align: center;
+      color: #cc3366;
     }
 
-    p {
-      margin-bottom: 20px;
-      line-height: 1.7;
+    .section-box {
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .section-box h2 {
+      color: #d63384;
+      margin-top: 0;
     }
 
     img {
-      max-width: 100%;
-      height: auto;
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
       border-radius: 20px;
-      margin: 20px 0;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      margin: 10px;
+    }
+
+    .image-row {
+      text-align: center;
     }
   </style>
 </head>
-
 <body>
 
-  <div class="navbar">
-    <a href="index.html"><i class="fas fa-home"></i> Home</a>
-    <a href="day1.html"><i class="fas fa-plane-arrival"></i> Day 1</a>
-    <a href="day2.html"><i class="fas fa-landmark"></i> Day 2</a>
-    <a href="day3.html"><i class="fas fa-mountain"></i> Day 3</a>
-    <a href="day4.html"><i class="fas fa-utensils"></i> Day 4</a>
-    <a href="day5.html"><i class="fas fa-store"></i> Day 5</a>
-    <a href="day6.html"><i class="fas fa-leaf"></i> Day 6</a>
-    <a href="day7.html"><i class="fas fa-train"></i> Day 7</a>
-    <a href="day8.html"><i class="fas fa-heart"></i> Day 8</a>
-  </div>
-  <!-- Page Content -->
-  <div class="content">
-    <h1>Welcome to Our Japan Trip!</h1>
-    <p>Explore the beauty of Japan with us. Each day brings new adventures, delicious food, and unforgettable memories.</p>
-  </div>
+  <nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="day1.html">✈️ Day 1</a>
+    <a href="day2.html">🗻 Day 2</a>
+    <a href="day3.html">⛩️ Day 3</a>
+    <a href="day4.html">🍜 Day 4</a>
+    <a href="day5.html">🎌 Day 5</a>
+    <a href="day6.html">🛍️ Day 6</a>
+    <a href="day7.html">🧳 Day 7</a>
+    <a href="day8.html">✈️ Fly Back</a>
+  </nav>
 
-</body>
-</html>
-  <!-- Day 1 Section -->
-  <section id="day1" class="day-section">
-    <h2>Day 1: Monday, May 26 - Arrival in Tokyo, Visit Shibuya</h2>
-    <div class="itinerary-item">✈️ 3:50 PM – Arrive at Haneda Airport (HND)</div>
-    <div class="itinerary-item">🚗 4:30 PM – Private car service to Airbnb</div>
-    <div class="itinerary-item">🚆 6:00 PM – 6:45 PM – Explore Harajuku's Takeshita Street (snacks, crepes, photo ops)</div>
-    <div class="photo-box">
-  <img src="https://media-hosting.imagekit.io/42d3f8dcb0b64c4b/IMG_0575.jpeg?Expires=1841785815&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=bWjKTJN9WkQLVF6vIMZ0vywSFl9bPqyUuiDcTLIU~pHZMF7OLytjoN40gH33kJo12yVBeNyfM-4EzCwq4Ggmk549JnQuwVTodIzAHfalaJSMQCATb-dAdvY5oWbbsKP74~-hMWTWo835XhCDls0NjLJ~yQ3INuqCm8YTNYz5MTxWor6CqG0bLyX1YzrFSz~NEVCuF0W~AiCSkYFwhF-y8dzbZegZNT2Vs1qm6mmVxL4TNIO61lzErSCPSkksgqSxi6r60Do114CP7KOYKXFWE8NfrHnLSmn3pQx7KeEYzBnCQbrrzBBLiiqK9Tsq-JvJtJ88Av19Jlt74kDl7ZkaUQ__" alt="Group photo in Harajuku">
-  <p class="caption">Harajuku street!</p>
-</div>
-    <div class="itinerary-item">🌆 7:00 PM – 8:00 PM – Head to Shibuya: see Shibuya Crossing & Shibuya Sky</div>
-    <div class="photo-box">
-  <img src="https://media-hosting.imagekit.io/2c7ed80ceede4ca1/IMG_0576.jpeg?Expires=1841786152&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=tacq65dVnQttvIHMzdK2UCBrU1XUPTIoR9VQ9bqGGPwvvBl59MObYNzebZSXvp3zDaJlCAJ4knCCG9S0CsYcFM2xnwSVe4h639H58zVf8GWDkIsHfDrD1Q0~jV0iwMTvc3Ro0XOooRcAdS9wXWSGZjAXsaAJzjc8nHew52kV3W4DtaUpnPFtLbgkDKp5pra4DIq2AhzV68EySYAfve--Lyi9KHEZ~9daimHeXtqUBnK3ewkUe6Y5VHbcriiU4FkFHAVcKNE5RZjX3fVMH2VI4Nb8KoKpsyaLVtuPpctaIgB7UFP6uvZAw2ivIZVfH~YieFxIZEZhAuHuk3JyBtXA4w__" alt="Shibuya Crossing photo">
-  <p class="caption">Shibuya Crossing at night — neon lights and big city vibes!</p>
-</div>
-    <div class="itinerary-item">🍱 8:00 PM – Dinner in Shibuya (e.g., Ichiran Ramen, Uobei Sushi, or Genki Izakaya)</div>
-    <div class="itinerary-item">🏠 9:30 PM – Return to Airbnb & rest</div>
+  <div class="container">
+    <h1>Day 1: Monday, May 26 – Arrival in Tokyo, Visit Shibuya</h1>
 
-    <div class="notes">
-      <h3>📝 Notes</h3>
+    <div class="section-box">
+      <h2>Itinerary</h2>
+      <ul>
+        <li>✈️ 3:50 PM – Arrive at Haneda Airport (HND)</li>
+        <li>🚗 4:30 PM – Private car service to Airbnb</li>
+        <li>🚆 6:00 PM – 6:45 PM – Explore Harajuku's Takeshita Street (snacks, crepes, photo ops)</li>
+        <li>🌆 7:00 PM – 8:00 PM – Head to Shibuya: see Shibuya Crossing & Shibuya Sky</li>
+        <li>🍱 8:00 PM – Dinner in Shibuya (e.g., Ichiran Ramen, Uobei Sushi, or Genki Izakaya)</li>
+        <li>🏠 9:30 PM – Return to Airbnb & rest</li>
+      </ul>
+    </div>
+
+    <div class="section-box">
+      <h2>Notes</h2>
       <p>Explore Harajuku & Shibuya with pride — bold style is celebrated. Keep an eye out for Black-owned pop-ups, and check Loft or Shibuya 109 for diverse haircare brands.</p>
     </div>
 
-    <div class="food">
-      <h3>🍽️ Food Ideas – Day 1</h3>
-      <p><strong>🥞 Breakfast:</strong> Flippers (Shibuya) or The Little Bakery Tokyo (Omotesando)</p>
-      <p><strong>🍱 Dinner:</strong> Ichiran Ramen, Uobei Sushi, or Genki Izakaya (Shibuya)</p>
-      <p><strong>🍡 Treats:</strong> Harajuku crepes or convenience store sweets</p>
+    <div class="section-box">
+      <h2>🍽️ Food Ideas</h2>
+      <ul>
+        <li>🥞 Breakfast: Flippers (Shibuya) or The Little Bakery Tokyo (Omotesando)</li>
+        <li>🍱 Dinner: Ichiran Ramen, Uobei Sushi, or Genki Izakaya (Shibuya)</li>
+        <li>🍡 Treats: Harajuku crepes or convenience store sweets</li>
+      </ul>
     </div>
-  </section>
+
+    <div class="image-row">
+      <img src="https://media-hosting.imagekit.io/42d3f8dcb0b64c4b/IMG_0575.jpeg?Expires=1841785815&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=bWjKTJN9WkQLVF6vIMZ0vywSFl9bPqyUuiDcTLIU~pHZMF7OLytjoN40gH33kJo12yVBeNyfM-4EzCwq4Ggmk549JnQuwVTodIzAHfalaJSMQCATb-dAdvY5oWbbsKP74~-hMWTWo835XhCDls0NjLJ~yQ3INuqCm8YTNYz5MTxWor6CqG0bLyX1YzrFSz~NEVCuF0W~AiCSkYFwhF-y8dzbZegZNT2Vs1qm6mmVxL4TNIO61lzErSCPSkksgqSxi6r60Do114CP7KOYKXFWE8NfrHnLSmn3pQx7KeEYzBnCQbrrzBBLiiqK9Tsq-JvJtJ88Av19Jlt74kDl7ZkaUQ__" alt="Harajuku Crepes">
+      <img src="https://media-hosting.imagekit.io/2c7ed80ceede4ca1/IMG_0576.jpeg?Expires=1841786152&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=tacq65dVnQttvIHMzdK2UCBrU1XUPTIoR9VQ9bqGGPwvvBl59MObYNzebZSXvp3zDaJlCAJ4knCCG9S0CsYcFM2xnwSVe4h639H58zVf8GWDkIsHfDrD1Q0~jV0iwMTvc3Ro0XOooRcAdS9wXWSGZjAXsaAJzjc8nHew52kV3W4DtaUpnPFtLbgkDKp5pra4DIq2AhzV68EySYAfve--Lyi9KHEZ~9daimHeXtqUBnK3ewkUe6Y5VHbcriiU4FkFHAVcKNE5RZjX3fVMH2VI4Nb8KoKpsyaLVtuPpctaIgB7UFP6uvZAw2ivIZVfH~YieFxIZEZhAuHuk3JyBtXA4w__" alt="Shibuya Crossing">
+    </div>
+  </div>
 
 </body>
 </html>
