@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -13,7 +13,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* Reset and Base Styles */
     * {
       margin: 0;
       padding: 0;
@@ -23,13 +22,10 @@
     body {
       font-family: 'Quicksand', sans-serif;
       color: #333;
-      background-color: #fff;
-      background-image: url('https://www.transparenttextures.com/patterns/asanoha.png');
-      background-repeat: repeat;
-      background-size: 200px 200px;
+      background-color: #ffe4ec; /* light pink */
+      font-size: 18px;
     }
 
-    /* Sticky Navbar */
     .navbar {
       background-color: rgba(255, 228, 225, 0.95);
       padding: 10px 0;
@@ -45,7 +41,7 @@
       color: #d6336c;
       text-decoration: none;
       padding: 10px 15px;
-      font-size: 16px;
+      font-size: 18px;
       display: inline-block;
       transition: background-color 0.3s ease;
     }
@@ -59,25 +55,35 @@
       margin-right: 6px;
     }
 
-    /* Content Styling */
     .content {
-      padding: 40px;
+      padding: 40px 20px;
       text-align: center;
     }
 
     h1 {
       margin-bottom: 20px;
       font-weight: 600;
+      font-size: 32px;
+      color: #c2185b;
     }
 
     p {
-      font-size: 18px;
-      line-height: 1.6;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 20px;
+      margin: 20px 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
   </style>
 </head>
+
 <body>
-  <!-- Sticky Navbar with Icons -->
+
   <div class="navbar">
     <a href="index.html"><i class="fas fa-home"></i> Home</a>
     <a href="day1.html"><i class="fas fa-plane-arrival"></i> Day 1</a>
