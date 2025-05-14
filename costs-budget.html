@@ -1,277 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estimated Costs & Budget - Japan Trip</title>
-  <style>
-    /* Sticky pink navigation bar */
-    nav {
-      background-color: #ffb6c1;
-      position: sticky;
-      top: 0;
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      padding: 12px 0;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    nav a {
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      font-size: 16px;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #8b005d;
-    }
-
-    /* Main page content */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-
-    h1, h2 {
-      text-align: center;
-      color: #ff6f91;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 20px;
-    }
-
-    .section {
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
-      padding: 20px;
-    }
-
-    .section h2 {
-      color: #ff6f91;
-    }
-
-    .box {
-      background-color: #ffb6c1;
-      border-radius: 8px;
-      padding: 15px;
-      margin-bottom: 10px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-
-    th, td {
-      padding: 12px;
-      text-align: center;
-      border: 1px solid #ddd;
-    }
-
-    th {
-      background-color: #ffb6c1;
-      color: white;
-    }
-
-    td {
-      background-color: #f9f9f9;
-    }
-
-    /* Daily Budget Estimator section */
-    .budget-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 15px;
-    }
-
-    .budget-box {
-      background-color: #ffe4e1;
-      border-radius: 12px;
-      padding: 25px;
-      width: 30%;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .budget-box h3 {
-      color: #ff6f91;
-      font-size: 20px;
-    }
-
-    .budget-box p {
-      font-size: 18px;
-      margin-top: 10px;
-      font-weight: bold;
-    }
-
-    .budget-box ul {
-      list-style: none;
-      padding: 0;
-      text-align: left;
-    }
-
-    .budget-box ul li {
-      font-size: 16px;
-      margin: 5px 0;
-    }
-
-    .budget-icon {
-      font-size: 30px;
-      color: #ff6f91;
-    }
-    
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimated Costs & Daily Budget</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #ff80bf;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #ff4d94;
+        }
+        .section-title {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.5em;
+            color: #ff4d94;
+        }
+        .cost-table, .budget-table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        .cost-table th, .cost-table td, .budget-table th, .budget-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .cost-table th, .budget-table th {
+            background-color: #ff80bf;
+            color: white;
+        }
+        .note {
+            font-style: italic;
+            color: #555;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <a href="index.html">🏠 Home</a>
-    <a href="day1.html">✈️ Day 1</a>
-    <a href="day2.html">🗻 Day 2</a>
-    <a href="day3.html">⛩️ Day 3</a>
-    <a href="day4.html">🍜 Day 4</a>
-    <a href="day5.html">🎌 Day 5</a>
-    <a href="day6.html">🛍️ Day 6</a>
-    <a href="day7.html">🎎 Day 7</a>
-    <a href="day8.html">✈️ Day 8</a>
-    <a href="traveltips.html">📌 Travel Tips</a>
-    <a href="costs-budget.html">💰 Budget</a>
-  </nav>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="day1.html">✈️ Day 1</a>
+        <a href="day2.html">🗻 Day 2</a>
+        <a href="day3.html">⛩️ Day 3</a>
+        <a href="day4.html">🍜 Day 4</a>
+        <a href="day5.html">🎌 Day 5</a>
+        <a href="day6.html">🛍️ Day 6</a>
+        <a href="day7.html">🎎 Day 7</a>
+        <a href="day8.html">✈️ Day 8</a>
+        <a href="costs-budget.html">💰 Costs & Budget</a>
+    </nav>
 
-  <!-- Page Content -->
-  <div class="container">
-    <h1>💰 Estimated Costs & Budget - Japan Trip</h1>
+    <!-- Page Title -->
+    <h1>Estimated Costs & Daily Budget</h1>
 
     <!-- Estimated Costs Table -->
-    <div class="section">
-      <h2>Estimated Costs Per Person (JPY / USD)</h2>
-      <table>
+    <h2>Estimated Costs Per Person (JPY / USD)</h2>
+    <table class="cost-table">
         <thead>
-          <tr>
-            <th>Item</th>
-            <th>JPY</th>
-            <th>USD</th>
-            <th>Notes</th>
-          </tr>
+            <tr>
+                <th>Item</th>
+                <th>JPY</th>
+                <th>USD</th>
+                <th>Notes</th>
+            </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Shinkansen (Round Trip)</td>
-            <td>¥31,880</td>
-            <td>~$206</td>
-            <td>Tokyo ⇄ Osaka/Kyoto</td>
-          </tr>
-          <tr>
-            <td>Street Karting</td>
-            <td>¥12,000</td>
-            <td>~$77</td>
-            <td>Mario-style karting</td>
-          </tr>
-          <tr>
-            <td>Ueno Zoo</td>
-            <td>¥600</td>
-            <td>~$4</td>
-            <td>Adults; kids ~¥200</td>
-          </tr>
-          <tr>
-            <td>Joypolis</td>
-            <td>¥5,000</td>
-            <td>~$32</td>
-            <td>Unlimited ride passport</td>
-          </tr>
-          <tr>
-            <td>Kimono & Tea Ceremony</td>
-            <td>¥5,500–6,500</td>
-            <td>~$35–42</td>
-            <td>Includes dressing + guided ceremony</td>
-          </tr>
-          <tr>
-            <td>Food (Daily Avg.)</td>
-            <td>¥4,500/day</td>
-            <td>~$29/day</td>
-            <td>Combines sit-down + convenience meals</td>
-          </tr>
-          <tr>
-            <td>Local Transport (Daily)</td>
-            <td>¥1,000–1,500/day</td>
-            <td>~$6–10/day</td>
-            <td>Suica/Pasmo card use</td>
-          </tr>
-          <tr>
-            <td>Attractions (avg.)</td>
-            <td>¥1,500–2,000</td>
-            <td>~$10–13</td>
-            <td>Arcades, museums, etc.</td>
-          </tr>
-          <tr>
-            <td>Miscellaneous</td>
-            <td>¥5,000–7,000</td>
-            <td>~$32–45</td>
-            <td>Souvenirs, snacks, etc.</td>
-          </tr>
+            <tr>
+                <td>Shinkansen (Round Trip)</td>
+                <td>¥31,880</td>
+                <td>~$206</td>
+                <td>Tokyo ⇄ Osaka/Kyoto</td>
+            </tr>
+            <tr>
+                <td>Street Karting</td>
+                <td>¥12,000</td>
+                <td>~$77</td>
+                <td>Mario-style karting</td>
+            </tr>
+            <tr>
+                <td>Ueno Zoo</td>
+                <td>¥600</td>
+                <td>~$4</td>
+                <td>Adults; kids ~¥200</td>
+            </tr>
+            <tr>
+                <td>Joypolis</td>
+                <td>¥5,000</td>
+                <td>~$32</td>
+                <td>Unlimited ride passport</td>
+            </tr>
+            <tr>
+                <td>Kimono & Tea Ceremony</td>
+                <td>¥5,500–6,500</td>
+                <td>~$35–42</td>
+                <td>Includes dressing + guided ceremony</td>
+            </tr>
+            <tr>
+                <td>Food (Daily Avg.)</td>
+                <td>¥4,500/day</td>
+                <td>~$29/day</td>
+                <td>Combines sit-down + convenience meals</td>
+            </tr>
+            <tr>
+                <td>Local Transport (Daily)</td>
+                <td>¥1,000–1,500/day</td>
+                <td>~$6–10/day</td>
+                <td>Suica/Pasmo card use</td>
+            </tr>
+            <tr>
+                <td>Attractions (avg.)</td>
+                <td>¥1,500–2,000</td>
+                <td>~$10–13</td>
+                <td>Arcades, museums, etc.</td>
+            </tr>
+            <tr>
+                <td>Miscellaneous</td>
+                <td>¥5,000–7,000</td>
+                <td>~$32–45</td>
+                <td>Souvenirs, snacks, etc.</td>
+            </tr>
         </tbody>
-      </table>
-    </div>
+    </table>
 
-    <!-- Enhanced Daily Budget Estimator -->
-    <div class="section">
-      <h2>Daily Budget Estimator</h2>
-      <div class="budget-container">
-        <div class="budget-box">
-          <div class="budget-icon">🚆</div>
-          <h3>Transport</h3>
-          <ul>
-            <li>¥1,500/day (~$10) for local transport</li>
-            <li>Shinkansen (round trip) ¥31,880 (~$206)</li>
-          </ul>
-          <p><strong>Total: ¥33,380 (~$216)</strong></p>
-        </div>
-        <div class="budget-box">
-          <div class="budget-icon">🍱</div>
-          <h3>Food</h3>
-          <ul>
-            <li>¥4,500/day (~$29) for meals</li>
-            <li>Try convenience store breakfasts, street food, and sit-down meals</li>
-          </ul>
-          <p><strong>Total: ¥36,000 (~$232) for 8 days</strong></p>
-        </div>
-        <div class="budget-box">
-          <div class="budget-icon">🎟️</div>
-          <h3>Attractions</h3>
-          <ul>
-            <li>Average ¥1,500–2,000/day (~$10–13) for attractions</li>
-            <li>Visit Joypolis, Ueno Zoo, arcades, etc.</li>
-          </ul>
-          <p><strong>Total: ¥13,000–16,000 (~$84–103) for 8 days</strong></p>
-        </div>
-      </div>
-      <div class="budget-container">
-        <div class="budget-box">
-          <div class="budget-icon">💸</div>
-          <h3>Miscellaneous</h3>
-          <ul>
-            <li>Souvenirs, snacks, extra items: ¥5,000–7,000 (~$32–45)</li>
-          </ul>
-          <p><strong>Total: ¥5,000–7,000 (~$32–45)</strong></p>
-        </div>
-        <div class="budget-box">
-          <h3>Total Estimated Cost</h3>
-          <ul>
-            <li><strong>Per Day: ¥9
+    <!-- Daily Budget Table -->
+    <div class="section-title">Daily Budget Breakdown</div>
+    <table class="budget-table">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>JPY</th>
+                <th>USD</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Transportation (Local + Shinkansen)</td>
+                <td>¥5,485/day</td>
+                <td>$35.4/day</td>
+            </tr>
+            <tr>
+                <td>Food (Daily Average)</td>
+                <td>¥4,500/day</td>
+                <td>$29/day</td>
+            </tr>
+            <tr>
+                <td>Attractions (Daily Average)</td>
+                <td>¥1,750/day</td>
+                <td>$11.3/day</td>
+            </tr>
+            <tr>
+                <td>Miscellaneous (Souvenirs, Snacks, etc.)</td>
+                <td>¥750/day</td>
+                <td>$4.8/day</td>
+            </tr>
+            <tr>
+                <td><strong>Total per Day</strong></td>
+                <td><strong>¥12,485</strong></td>
+                <td><strong>$80.5</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="note">*The goal is to stay within a daily budget of $300 per person, but the typical daily cost is around $80.5 per person, which leaves room for additional activities and flexibility in spending.</p>
+
+</body>
+</html>
