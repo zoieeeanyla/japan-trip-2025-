@@ -261,15 +261,39 @@
   <p class="note">*The goal is to stay within a daily budget of $300 per person, but the typical daily cost is around $80.5 per person, which leaves plenty of room for extra activities and shopping.</p>
 
   <script>
-    const conversionRate = 155;
+  const conversionRate = 155;
 
-    function calculateBudget() {
-      const days = parseInt(document.getElementById("days").value);
-      if (!days || days <= 0) return;
+  function calculateBudget() {
+    const days = parseInt(document.getElementById("days").value);
+    if (!days || days <= 0) return;
 
-      const foodPerDay = 4500;
-      const transPerDay = 1250;
-      const attPerDay = 1750;
+    const foodPerDay = 4500;
+    const transPerDay = 1250;
+    const attPerDay = 1750;
+
+    const foodJPY = foodPerDay * days;
+    const transJPY = transPerDay * days;
+    const attJPY = attPerDay * days;
+    const totalJPY = foodJPY + transJPY + attJPY;
+
+    const foodUSD = (foodJPY / conversionRate).toFixed(2);
+    const transUSD = (transJPY / conversionRate).toFixed(2);
+    const attUSD = (attJPY / conversionRate).toFixed(2);
+    const totalUSD = (totalJPY / conversionRate).toFixed(2);
+
+    // Set the values in the HTML
+    document.getElementById("foodJPY").textContent = foodJPY;
+    document.getElementById("foodUSD").textContent = foodUSD;
+    document.getElementById("transJPY").textContent = transJPY;
+    document.getElementById("transUSD").textContent = transUSD;
+    document.getElementById("attJPY").textContent = attJPY;
+    document.getElementById("attUSD").textContent = attUSD;
+    document.getElementById("totalJPY").textContent = totalJPY;
+    document.getElementById("totalUSD").textContent = totalUSD;
+
+    document.getElementById("results").style.display = "block";
+  }
+</script>
 
       const foodJPY = foodPerDay * days;
       const transJPY = transPerDay * days;
