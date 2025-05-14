@@ -46,4 +46,27 @@ p {
 
 .navbar a:hover {
   color: #ac4d85;
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+figure {
+  text-align: center;
+  max-width: 300px;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: #555;
 }
