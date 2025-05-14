@@ -15,16 +15,14 @@
       font-size: 18px;
     }
 
-    /* Sticky pink nav bar */
+    /* Horizontal pink nav bar */
     nav {
-      position: sticky;
-      top: 0;
       background-color: #ffb6c1;
       padding: 12px 0;
       z-index: 999;
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      justify-content: center;
+      gap: 20px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
@@ -33,7 +31,6 @@
       color: white;
       font-weight: bold;
       font-size: 18px;
-      margin: 8px 0;
     }
 
     h2, h3 {
@@ -50,6 +47,14 @@
     ul {
       list-style-type: none;
       padding-left: 0;
+    }
+
+    .section {
+      margin: 40px 0;
+      background-color: #fff0f5;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 2px 2px 8px #ccc;
     }
 
     .gallery {
@@ -103,46 +108,55 @@
   </nav>
 
   <h2>Day 3: Mt. Fuji Day Trip</h2>
-  <p>
-    🚐 8:00 AM – Depart Tokyo via private van<br>
-    🗻 10:30 AM – 1:00 PM – Explore Lake Kawaguchi, Chureito Pagoda, and nearby viewpoints<br>
-    🍱 1:00 PM – 2:00 PM – Lunch with Mt. Fuji views (Hoto Fudo recommended)<br>
-    🛍️ 2:15 PM – 3:15 PM – Optional stop at Gotemba Premium Outlets<br>
-    🚐 3:30 PM – 6:00 PM – Return to Tokyo<br>
-    🚆 6:30 PM – Arrive in Ikebukuro<br>
-    🎮 6:45 PM – 8:00 PM – Explore Sunshine City: Pokémon Center Mega Tokyo, Namco arcade, optional Sunshine Aquarium<br>
-    🍣 8:00 PM – 9:00 PM – Dinner<br>
-    🛍️ 9:00 PM – 9:30 PM – Quick browse at Tokyu Hands or Don Quijote<br>
-    🎒 9:30 PM – 10:00 PM – Return to Airbnb & rest — the kids will crash happy!
-  </p>
 
-  <h3>Food Ideas – Day 3</h3>
-  <ul>
-    <li>🍱 Lunch: Hoto Fudo (Udon near Mt. Fuji)</li>
-    <li>🍣 Dinner: Ichiran Ramen or Sushi-Ro in Ikebukuro</li>
-    <li>🍡 Treats: Dessert in Sunshine City mall or Pokémon Café pop-up</li>
-  </ul>
+  <div class="section">
+    <h3>Itinerary for Day 3</h3>
+    <p>
+      🚐 8:00 AM – Depart Tokyo via private van<br>
+      🗻 10:30 AM – 1:00 PM – Explore Lake Kawaguchi, Chureito Pagoda, and nearby viewpoints<br>
+      🍱 1:00 PM – 2:00 PM – Lunch with Mt. Fuji views (Hoto Fudo recommended)<br>
+      🛍️ 2:15 PM – 3:15 PM – Optional stop at Gotemba Premium Outlets<br>
+      🚐 3:30 PM – 6:00 PM – Return to Tokyo<br>
+      🚆 6:30 PM – Arrive in Ikebukuro<br>
+      🎮 6:45 PM – 8:00 PM – Explore Sunshine City: Pokémon Center Mega Tokyo, Namco arcade, optional Sunshine Aquarium<br>
+      🍣 8:00 PM – 9:00 PM – Dinner<br>
+      🛍️ 9:00 PM – 9:30 PM – Quick browse at Tokyu Hands or Don Quijote<br>
+      🎒 9:30 PM – 10:00 PM – Return to Airbnb & rest — the kids will crash happy!
+    </p>
+  </div>
 
-  <div class="gallery">
-    <figure>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Chureito_Pagoda_with_Mount_Fuji_in_spring.jpg/640px-Chureito_Pagoda_with_Mount_Fuji_in_spring.jpg" alt="Chureito Pagoda">
-      <figcaption>Mt. Fuji from Chureito Pagoda</figcaption>
-    </figure>
+  <div class="section">
+    <h3>Food Ideas – Day 3</h3>
+    <ul>
+      <li>🍱 Lunch: Hoto Fudo (Udon near Mt. Fuji)</li>
+      <li>🍣 Dinner: Ichiran Ramen or Sushi-Ro in Ikebukuro</li>
+      <li>🍡 Treats: Dessert in Sunshine City mall or Pokémon Café pop-up</li>
+    </ul>
+  </div>
 
-    <figure>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Lake_Kawaguchi_and_Mount_Fuji_from_Kachi_Kachi_Ropeway_2015-01-16.jpg" alt="Lake Kawaguchi">
-      <figcaption>Peaceful Lake Kawaguchi</figcaption>
-    </figure>
+  <div class="section">
+    <h3>Photo Gallery</h3>
+    <div class="gallery">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Chureito_Pagoda_with_Mount_Fuji_in_spring.jpg/640px-Chureito_Pagoda_with_Mount_Fuji_in_spring.jpg" alt="Chureito Pagoda">
+        <figcaption>Mt. Fuji from Chureito Pagoda</figcaption>
+      </figure>
 
-    <figure>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Pokemon_Center_Mega_Tokyo.jpg" alt="Pokémon Center Mega Tokyo">
-      <figcaption>Pokémon Center Mega Tokyo</figcaption>
-    </figure>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Lake_Kawaguchi_and_Mount_Fuji_from_Kachi_Kachi_Ropeway_2015-01-16.jpg" alt="Lake Kawaguchi">
+        <figcaption>Peaceful Lake Kawaguchi</figcaption>
+      </figure>
 
-    <figure>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/SunshineCityMallIkebukuro.jpg" alt="Sunshine City Ikebukuro">
-      <figcaption>Sunshine City Ikebukuro</figcaption>
-    </figure>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Pokemon_Center_Mega_Tokyo.jpg" alt="Pokémon Center Mega Tokyo">
+        <figcaption>Pokémon Center Mega Tokyo</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/SunshineCityMallIkebukuro.jpg" alt="Sunshine City Ikebukuro">
+        <figcaption>Sunshine City Ikebukuro</figcaption>
+      </figure>
+    </div>
   </div>
 
 </body>
