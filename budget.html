@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Daily Budget Estimator</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estimated Costs & Budget - Japan Trip</title>
   <style>
-    body {
-      font-family: 'Quicksand', sans-serif;
-      background-color: #fff0f5;
-      color: #333;
-      padding: 0;
-      margin: 0;
-    }
-
+    /* Sticky pink navigation bar */
     nav {
       background-color: #ffb6c1;
-      padding: 12px 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
       position: sticky;
       top: 0;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 12px 0;
       z-index: 1000;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
@@ -30,131 +24,217 @@
       text-decoration: none;
       color: white;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 16px;
+      transition: color 0.3s;
     }
 
-    header {
+    nav a:hover {
+      color: #8b005d;
+    }
+
+    /* Main page content */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2 {
       text-align: center;
-      padding: 40px 20px 20px;
-    }
-
-    header h1 {
-      color: #d63384;
-      font-size: 2.2em;
+      color: #ff6f91;
     }
 
     .container {
-      max-width: 600px;
-      background: #fff;
+      max-width: 1200px;
       margin: 20px auto;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 2px 2px 10px #ddd;
+      padding: 20px;
     }
 
-    label {
-      font-size: 18px;
-      display: block;
+    .section {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+
+    .section h2 {
+      color: #ff6f91;
+    }
+
+    .box {
+      background-color: #ffb6c1;
+      border-radius: 8px;
+      padding: 15px;
       margin-bottom: 10px;
     }
 
-    input {
-      padding: 10px;
-      font-size: 16px;
+    table {
       width: 100%;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-
-    button {
-      background-color: #ff69b4;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      font-size: 16px;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    .results {
+      border-collapse: collapse;
       margin-top: 20px;
-      background-color: #fffafc;
-      padding: 20px;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #ffb6c1;
+      color: white;
+    }
+
+    td {
+      background-color: #f9f9f9;
+    }
+
+    .cost-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .cost-box {
+      background-color: #ffe4e1;
       border-radius: 10px;
-      border: 1px solid #ffddee;
+      padding: 15px;
+      flex: 1;
     }
 
-    .results p {
-      font-size: 18px;
-      margin: 10px 0;
+    .cost-box h3 {
+      margin-top: 0;
     }
 
-    @media (max-width: 768px) {
-      input, button {
-        font-size: 16px;
-      }
+    .cost-box ul {
+      list-style: none;
+      padding: 0;
     }
   </style>
 </head>
 <body>
 
+  <!-- Navigation Bar -->
   <nav>
     <a href="index.html">🏠 Home</a>
-    <a href="costs.html">💰 Costs</a>
-    <a href="budget.html">📊 Estimator</a>
+    <a href="day1.html">✈️ Day 1</a>
+    <a href="day2.html">🗻 Day 2</a>
+    <a href="day3.html">⛩️ Day 3</a>
+    <a href="day4.html">🍜 Day 4</a>
+    <a href="day5.html">🎌 Day 5</a>
+    <a href="day6.html">🛍️ Day 6</a>
+    <a href="day7.html">🎎 Day 7</a>
+    <a href="day8.html">✈️ Day 8</a>
+    <a href="traveltips.html">📌 Travel Tips</a>
+    <a href="costs-budget.html">💰 Budget</a>
   </nav>
 
-  <header>
-    <h1>📊 Daily Budget Estimator</h1>
-    <p>Estimate your total cost based on number of travel days</p>
-  </header>
-
+  <!-- Page Content -->
   <div class="container">
-    <label for="days">How many days will you be in Japan?</label>
-    <input type="number" id="days" placeholder="e.g. 8" min="1"/>
+    <h1>💰 Estimated Costs & Budget - Japan Trip</h1>
 
-    <button onclick="calculateBudget()">Calculate</button>
+    <!-- Estimated Costs Table -->
+    <div class="section">
+      <h2>Estimated Costs Per Person (JPY / USD)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>JPY</th>
+            <th>USD</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Shinkansen (Round Trip)</td>
+            <td>¥31,880</td>
+            <td>~$206</td>
+            <td>Tokyo ⇄ Osaka/Kyoto</td>
+          </tr>
+          <tr>
+            <td>Street Karting</td>
+            <td>¥12,000</td>
+            <td>~$77</td>
+            <td>Mario-style karting</td>
+          </tr>
+          <tr>
+            <td>Ueno Zoo</td>
+            <td>¥600</td>
+            <td>~$4</td>
+            <td>Adults; kids ~¥200</td>
+          </tr>
+          <tr>
+            <td>Joypolis</td>
+            <td>¥5,000</td>
+            <td>~$32</td>
+            <td>Unlimited ride passport</td>
+          </tr>
+          <tr>
+            <td>Kimono & Tea Ceremony</td>
+            <td>¥5,500–6,500</td>
+            <td>~$35–42</td>
+            <td>Includes dressing + guided ceremony</td>
+          </tr>
+          <tr>
+            <td>Food (Daily Avg.)</td>
+            <td>¥4,500/day</td>
+            <td>~$29/day</td>
+            <td>Combines sit-down + convenience meals</td>
+          </tr>
+          <tr>
+            <td>Local Transport (Daily)</td>
+            <td>¥1,000–1,500/day</td>
+            <td>~$6–10/day</td>
+            <td>Suica/Pasmo card use</td>
+          </tr>
+          <tr>
+            <td>Attractions (avg.)</td>
+            <td>¥1,500–2,000</td>
+            <td>~$10–13</td>
+            <td>Arcades, museums, etc.</td>
+          </tr>
+          <tr>
+            <td>Miscellaneous</td>
+            <td>¥5,000–7,000</td>
+            <td>~$32–45</td>
+            <td>Souvenirs, snacks, etc.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-    <div class="results" id="results" style="display: none;">
-      <p><strong>Food Total:</strong> ¥<span id="foodJPY"></span> (~$<span id="foodUSD"></span>)</p>
-      <p><strong>Local Transport:</strong> ¥<span id="transJPY"></span> (~$<span id="transUSD"></span>)</p>
-      <p><strong>Attractions:</strong> ¥<span id="attJPY"></span> (~$<span id="attUSD"></span>)</p>
-      <p><strong>Total Daily Cost:</strong> ¥<span id="totalJPY"></span> (~$<span id="totalUSD"></span>)</p>
+    <!-- Budget Breakdown -->
+    <div class="section">
+      <h2>Daily Budget Estimator</h2>
+      <div class="cost-container">
+        <div class="cost-box">
+          <h3>Transport & Food</h3>
+          <ul>
+            <li>Transport: ¥1,500/day (~$10)</li>
+            <li>Food: ¥4,500/day (~$29)</li>
+          </ul>
+        </div>
+        <div class="cost-box">
+          <h3>Attractions & Misc.</h3>
+          <ul>
+            <li>Attractions: ¥2,000/day (~$13)</li>
+            <li>Miscellaneous: ¥5,000–7,000 (~$32–45)</li>
+          </ul>
+        </div>
+        <div class="cost-box">
+          <h3>Total Estimated Cost</h3>
+          <ul>
+            <li>Per Day: ¥9,500–11,000 (~$61–71)</li>
+            <li>Total for 8 Days: ¥76,000–88,000 (~$490–570)</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 
-  <script>
-    const conversionRate = 155;
-
-    function calculateBudget() {
-      const days = parseInt(document.getElementById("days").value);
-      if (!days || days <= 0) return;
-
-      const foodPerDay = 4500;
-      const transPerDay = 1250;
-      const attPerDay = 1750;
-
-      const foodJPY = foodPerDay * days;
-      const transJPY = transPerDay * days;
-      const attJPY = attPerDay * days;
-      const totalJPY = foodJPY + transJPY + attJPY;
-      const foodUSD = (foodJPY / conversionRate).toFixed(2);
-      const transUSD = (transJPY / conversionRate).toFixed(2);
-      const attUSD = (attJPY / conversionRate).toFixed(2);
-      const totalUSD = (totalJPY / conversionRate).toFixed(2);
-
-      document.getElementById("foodJPY").textContent = foodJPY;
-      document.getElementById("foodUSD").textContent = foodUSD;
-      document.getElementById("transJPY").textContent = transJPY;
-      document.getElementById("transUSD").textContent = transUSD;
-      document.getElementById("attJPY").textContent = attJPY;
-      document.getElementById("attUSD").textContent = attUSD;
-      document.getElementById("totalJPY").textContent = totalJPY;
-      document.getElementById("totalUSD").textContent = totalUSD;
-
-      document.getElementById("results").style.display = "block";
-    }
-  </script>
 </body>
 </html>
