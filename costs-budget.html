@@ -92,27 +92,50 @@
       background-color: #f9f9f9;
     }
 
-    .cost-container {
+    /* Daily Budget Estimator section */
+    .budget-container {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
-      gap: 20px;
+      gap: 15px;
     }
 
-    .cost-box {
+    .budget-box {
       background-color: #ffe4e1;
-      border-radius: 10px;
-      padding: 15px;
-      flex: 1;
+      border-radius: 12px;
+      padding: 25px;
+      width: 30%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
     }
 
-    .cost-box h3 {
-      margin-top: 0;
+    .budget-box h3 {
+      color: #ff6f91;
+      font-size: 20px;
     }
 
-    .cost-box ul {
+    .budget-box p {
+      font-size: 18px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .budget-box ul {
       list-style: none;
       padding: 0;
+      text-align: left;
     }
+
+    .budget-box ul li {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    .budget-icon {
+      font-size: 30px;
+      color: #ff6f91;
+    }
+    
   </style>
 </head>
 <body>
@@ -207,34 +230,48 @@
       </table>
     </div>
 
-    <!-- Budget Breakdown -->
+    <!-- Enhanced Daily Budget Estimator -->
     <div class="section">
       <h2>Daily Budget Estimator</h2>
-      <div class="cost-container">
-        <div class="cost-box">
-          <h3>Transport & Food</h3>
+      <div class="budget-container">
+        <div class="budget-box">
+          <div class="budget-icon">🚆</div>
+          <h3>Transport</h3>
           <ul>
-            <li>Transport: ¥1,500/day (~$10)</li>
-            <li>Food: ¥4,500/day (~$29)</li>
+            <li>¥1,500/day (~$10) for local transport</li>
+            <li>Shinkansen (round trip) ¥31,880 (~$206)</li>
           </ul>
+          <p><strong>Total: ¥33,380 (~$216)</strong></p>
         </div>
-        <div class="cost-box">
-          <h3>Attractions & Misc.</h3>
+        <div class="budget-box">
+          <div class="budget-icon">🍱</div>
+          <h3>Food</h3>
           <ul>
-            <li>Attractions: ¥2,000/day (~$13)</li>
-            <li>Miscellaneous: ¥5,000–7,000 (~$32–45)</li>
+            <li>¥4,500/day (~$29) for meals</li>
+            <li>Try convenience store breakfasts, street food, and sit-down meals</li>
           </ul>
+          <p><strong>Total: ¥36,000 (~$232) for 8 days</strong></p>
         </div>
-        <div class="cost-box">
-          <h3>Total Estimated Cost</h3>
+        <div class="budget-box">
+          <div class="budget-icon">🎟️</div>
+          <h3>Attractions</h3>
           <ul>
-            <li>Per Day: ¥9,500–11,000 (~$61–71)</li>
-            <li>Total for 8 Days: ¥76,000–88,000 (~$490–570)</li>
+            <li>Average ¥1,500–2,000/day (~$10–13) for attractions</li>
+            <li>Visit Joypolis, Ueno Zoo, arcades, etc.</li>
           </ul>
+          <p><strong>Total: ¥13,000–16,000 (~$84–103) for 8 days</strong></p>
         </div>
       </div>
-    </div>
-  </div>
-
-</body>
-</html>
+      <div class="budget-container">
+        <div class="budget-box">
+          <div class="budget-icon">💸</div>
+          <h3>Miscellaneous</h3>
+          <ul>
+            <li>Souvenirs, snacks, extra items: ¥5,000–7,000 (~$32–45)</li>
+          </ul>
+          <p><strong>Total: ¥5,000–7,000 (~$32–45)</strong></p>
+        </div>
+        <div class="budget-box">
+          <h3>Total Estimated Cost</h3>
+          <ul>
+            <li><strong>Per Day: ¥9
