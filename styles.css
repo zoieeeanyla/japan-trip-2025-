@@ -1,0 +1,39 @@
+/* Gallery Container */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 20px; /* Space between images */
+  justify-items: center;
+  margin: 40px 0;
+}
+
+/* Individual Image Container */
+figure {
+  text-align: center;
+  max-width: 150px; /* Limit the width of the image */
+}
+
+/* Image Styling */
+figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%; /* Rounded corners */
+  border: 3px solid #ff85a2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  max-width: 120px; /* Set max width */
+}
+
+/* Hover Effect */
+figure img:hover {
+  transform: scale(1.1); /* Zoom effect */
+}
+
+/* Caption Styling */
+figcaption {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #ff4d88;
+  font-family: 'Quicksand', sans-serif;
+}
